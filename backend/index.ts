@@ -25,10 +25,6 @@ server.use(express.json());
 // Skapar en anslutning till databasen med hjälp av information från .env-filen
 const pool = new Pool({
   connectionString: process.env.PGURI, // t.ex. PGURI=postgres://användare:lösenord@localhost:5432/databasnamn
-
-  ssl: {
-    rejectUnauthorized: false, // Render använder självsignerade certifikat
-  },
 });
 
 let newSearch: { from: string; to: string; avresa: string };
