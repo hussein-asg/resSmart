@@ -100,7 +100,7 @@ server.get("/bokninglista", (req, res) => {
 });
 
 //förslg stockholm till andra populära ställe
-server.get("/api/flights", async (req, res) => {
+/* server.get("/api/flights", async (req, res) => {
   const { origin, destination } = req.query;
   const token = "32c43c589a988df9ef550cafbf8edafc";
   const url = `https://api.travelpayouts.com/v2/prices/month-matrix?currency=sek&origin=${origin}&destination=${destination}&month=2025-07&token=${token}`;
@@ -115,4 +115,4 @@ server.use(express.static(path.join(path.resolve(), "dist")));
 // Starta servern
 server.listen(port, () => {
   console.log(`Servern lyssnar på http://localhost:${port}`);
-});
+}); */
